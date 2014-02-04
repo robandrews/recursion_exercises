@@ -19,6 +19,7 @@ end
 
 #Problem 3: You have an unsorted array of integers. Write a recursive solution to count the number of occurrences of a specific value.
 
+#Rob comments - probably didnt need to use blocks to track counter...
 def num_occur(array, target, counter = 0, &blk)
   dup_array = array.dup
   blk.call if dup_array.count == 0

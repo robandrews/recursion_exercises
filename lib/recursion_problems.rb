@@ -35,9 +35,9 @@ end
 def add_to_twelve?(array)
   temp = array.dup
   p temp
-  return true if (temp[-1] + temp[-2]) == 12 
-  temp.pop unless temp.count <= 2
-  p temp
+  return true if (temp[-1] + temp[-2]) == 12
+  return false if temp.count == 2
+  temp.pop
   add_to_twelve?(temp)
 end
 
@@ -47,10 +47,8 @@ end
 
 def sorted?(array)
   temp = array.dup
- 
   return true if array[-2] <= array[-1] && array.count == 2
   temp.pop
-  p temp
   temp[-2] <= temp[-1] && sorted?(temp)
 end
 
@@ -58,8 +56,12 @@ end
 #Problem 6: Write the code to give the value of a number after it is
 #reversed. Must use recursion. (Don't use any #reverse methods!)
 
+#Not finished...used strings blah.
 def reverse(number)
+  nums = number.to_s.split('').map{|el| el.to_i}
   
+  temp = [nums.pop]
+  temp << reverse(temp.)
 end
 
 a = [1,2,3,4,6,6,7,8]
